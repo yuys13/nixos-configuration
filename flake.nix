@@ -26,16 +26,16 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         modules = [
-	  ./nixos/configuration.nix
+          ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-	    home-manager.users.yuys13 = import ./home-manager/home.nix;
-	  }
-	];
+            home-manager.users.yuys13 = import ./home-manager/home.nix;
+          }
+        ];
       };
     };
 
