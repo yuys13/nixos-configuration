@@ -26,6 +26,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  #Enable tailscale
+  services.tailscale.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
