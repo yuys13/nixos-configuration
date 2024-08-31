@@ -23,6 +23,8 @@
     emacs
   ];
 
+  home.file.".config/tig/config".source = ./tig/config;
+
   programs.git = {
     enable = true;
     userName = "yuys13";
