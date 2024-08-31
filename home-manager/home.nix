@@ -19,6 +19,8 @@
     ghq
 
     tig
+
+    emacs
   ];
 
   programs.git = {
