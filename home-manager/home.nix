@@ -60,6 +60,8 @@
     };
   };
 
+  programs.gh.enable = true;
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
