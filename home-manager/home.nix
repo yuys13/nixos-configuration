@@ -151,7 +151,57 @@
   #   };
   # };
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    shellInit = ''
+    # for auto_ls
+    set -g autols_cmd ls
+    '';
+    plugins = [
+      {
+        name = "fish-ghq";
+        src = builtins.fetchGit {
+          url = "https://github.com/decors/fish-ghq";
+          rev = "cafaaabe63c124bf0714f89ec715cfe9ece87fa2";
+        };
+      }
+      {
+        name = "autols";
+        src = builtins.fetchGit {
+          url = "https://github.com/yuys13/autols.fish";
+          rev = "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a";
+        };
+      }
+      {
+        name = "gcd";
+        src = builtins.fetchGit {
+          url = "https://github.com/yuys13/gcd.fish";
+          rev = "b3e35ab0852d6779403ada84b1f1be03692f507a";
+        };
+      }
+      {
+        name = "fish-bd";
+        src = builtins.fetchGit {
+          url = "https://github.com/0rax/fish-bd";
+          rev = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
+        };
+      }
+      # {
+      #   name = "pure";
+      #   src = builtins.fetchGit {
+      #     url = "https://github.com/pure-fish/pure";
+      #     rev = "28447d2e7a4edf3c954003eda929cde31d3621d2";
+      #   };
+      # }
+      {
+        name = "bobthefish";
+        src = builtins.fetchGit {
+          url = "https://github.com/oh-my-fish/theme-bobthefish";
+          rev = "608b0b4de6badbd574189c69023bded36875f575";
+        };
+      }
+    ];
+  };
 
   home.stateVersion = "24.05";
 
