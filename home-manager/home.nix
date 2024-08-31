@@ -1,60 +1,98 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-  # You can import other home-manager modules here
-  imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
+{ config, pkgs, ... }:
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+{
+  home.username = "yuys13";
+  home.homeDirectory = "/home/yuys13";
+
+  home.packages = with pkgs; [
+    fastfetch
+
+    zip
+    xz
+    unzip
+    p7zip
+
+    ripgrep
+    jq
+    eza
+    fzf
+
+    tig
   ];
 
-  nixpkgs = {
-    # You can add overlays here
-    overlays = [
-      # If you want to use overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
-    ];
-    # Configure your nixpkgs instance
-    config = {
-      # Disable if you don't want unfree packages
-      allowUnfree = true;
-      # Workaround for https://github.com/nix-community/home-manager/issues/2942
-      allowUnfreePredicate = _: true;
+  programs.git = {
+    enable = true;
+    userName = "yuys13";
+    userEmail = "yuys13@users.noreply.github.com";
+    extraConfig = {
+      init = {
+        defaultbranch = "main";
+      };
+      commit = {
+        verbose = true;
+      };
+      push = {
+        default = "current";
+        useForceIfInclues = true;
+      };
+      pull = {
+        ff = "only";
+      };
+      diff = {
+        tool = "nvimdiff";
+      };
+      difftool = {
+        trustExitCode = true;
+      };
+      merge = {
+        tool = "nvimdiff";
+      };
+      mergetool = {
+        "vimdiff".trustExitCode = true;
+        "nvimdiff".trustExitCode = true;
+      };
+      blame = {
+        markIgnoredLines = true;
+      };
+      ghq = {
+        root = "~/src";
+      };
     };
   };
 
-  # TODO: Set your username
-  home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    extraConfig = ''
+      set number
+      set list
+      set expandtab
+      inoremap jj <Esc>
+    '';
   };
 
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
+  # programs.alacritty = {
+  #   enable = true;
+  #   settings = {
+  #     env.TERM = "xterm-256color";
+  #     font = {
+  #       size = 14;
+  #       normal = {
+  #         family = "HackGen Console NF";
+  #         style = "Regular";
+  #       };
+  #       bold = {
+  #         family = "HackGen Console NF";
+  #         style = "Bold";
+  #       };
+  #     };
+  #   };
+  # };
 
-  # Enable home-manager and git
+  programs.fish.enable = true;
+
+  home.stateVersion = "24.05";
+
   programs.home-manager.enable = true;
-  programs.git.enable = true;
-
-  # Nicely reload system units when changing configs
-  systemd.user.startServices = "sd-switch";
-
-  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "23.05";
 }
