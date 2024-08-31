@@ -16,6 +16,7 @@
     jq
     eza
     fzf
+    ghq
 
     tig
   ];
