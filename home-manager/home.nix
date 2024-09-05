@@ -20,6 +20,8 @@
     tig
 
     emacs
+    nil
+    nixfmt-rfc-style
   ];
 
   home.file.".config/tig/config".source = ./tig/config;
