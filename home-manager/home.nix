@@ -1,5 +1,11 @@
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  ...
+}:
+let
+  sources = pkgs.callPackage ../_sources/generated.nix { };
+in
 {
   home.username = "yuys13";
   home.homeDirectory = "/home/yuys13";
@@ -22,6 +28,8 @@
     emacs
     nil
     nixfmt-rfc-style
+
+    fishPlugins.bobthefish
   ];
 
   home.file.".config/tig/config".source = ./tig/config;
@@ -75,14 +83,7 @@
     extraPackages = with pkgs; [ gcc ];
   };
   home.file.".config/nvim" = {
-    source =
-      pkgs.fetchFromGitHub {
-        owner = "yuys13";
-        repo = "dotfiles";
-        rev = "a0581097794ed817e5a3ff8d6efdd4301230e09e";
-        sha256 = "ruEbTLFVkJ9MRp50GE77TolCDKmE8azQjkURO5NYtHY=";
-      }
-      + "/home/XDG_CONFIG_HOME/nvim";
+    source = sources.dotfiles.src + "/home/XDG_CONFIG_HOME/nvim";
     recursive = true;
   };
 
@@ -183,46 +184,20 @@
     '';
     plugins = [
       {
-        name = "fish-ghq";
-        src = builtins.fetchGit {
-          url = "https://github.com/decors/fish-ghq";
-          rev = "cafaaabe63c124bf0714f89ec715cfe9ece87fa2";
-        };
+        name = sources.fish-ghq.pname;
+        src = sources.fish-ghq.src;
       }
       {
-        name = "autols";
-        src = builtins.fetchGit {
-          url = "https://github.com/yuys13/autols.fish";
-          rev = "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a";
-        };
+        name = sources.fish-autols.pname;
+        src = sources.fish-autols.src;
       }
       {
-        name = "gcd";
-        src = builtins.fetchGit {
-          url = "https://github.com/yuys13/gcd.fish";
-          rev = "b3e35ab0852d6779403ada84b1f1be03692f507a";
-        };
+        name = sources.fish-gcd.pname;
+        src = sources.fish-gcd.src;
       }
       {
-        name = "fish-bd";
-        src = builtins.fetchGit {
-          url = "https://github.com/0rax/fish-bd";
-          rev = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
-        };
-      }
-      # {
-      #   name = "pure";
-      #   src = builtins.fetchGit {
-      #     url = "https://github.com/pure-fish/pure";
-      #     rev = "28447d2e7a4edf3c954003eda929cde31d3621d2";
-      #   };
-      # }
-      {
-        name = "bobthefish";
-        src = builtins.fetchGit {
-          url = "https://github.com/oh-my-fish/theme-bobthefish";
-          rev = "608b0b4de6badbd574189c69023bded36875f575";
-        };
+        name = sources.fish-bd.pname;
+        src = sources.fish-bd.src;
       }
     ];
   };

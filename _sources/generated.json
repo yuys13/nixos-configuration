@@ -1,0 +1,102 @@
+{
+    "dotfiles": {
+        "cargoLocks": null,
+        "date": "2024-09-06",
+        "extract": null,
+        "name": "dotfiles",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yuys13",
+            "repo": "dotfiles",
+            "rev": "b926540a54107a2339635a2b141b38a1c69f51fb",
+            "sha256": "sha256-dKaY8VlG3IwwVxcubQAy/oMFkkfvjdMuSR2QO1xILbs=",
+            "type": "github"
+        },
+        "version": "b926540a54107a2339635a2b141b38a1c69f51fb"
+    },
+    "fish-autols": {
+        "cargoLocks": null,
+        "date": "2021-11-15",
+        "extract": null,
+        "name": "fish-autols",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yuys13",
+            "repo": "autols.fish",
+            "rev": "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a",
+            "sha256": "sha256-zstnuTWAd0LeJRKauFCoSRbnu9T+21aHtLhYx9Wq56w=",
+            "type": "github"
+        },
+        "version": "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a"
+    },
+    "fish-bd": {
+        "cargoLocks": null,
+        "date": "2022-03-04",
+        "extract": null,
+        "name": "fish-bd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "0rax",
+            "repo": "fish-bd",
+            "rev": "ab686e028bfe95fa561a4f4e57840e36902d4d7d",
+            "sha256": "sha256-GeWjoakXa0t2TsMC/wpLEmsSVGhHFhBVK3v9eyQdzv0=",
+            "type": "github"
+        },
+        "version": "ab686e028bfe95fa561a4f4e57840e36902d4d7d"
+    },
+    "fish-gcd": {
+        "cargoLocks": null,
+        "date": "2021-11-15",
+        "extract": null,
+        "name": "fish-gcd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yuys13",
+            "repo": "gcd.fish",
+            "rev": "b3e35ab0852d6779403ada84b1f1be03692f507a",
+            "sha256": "sha256-1GUs+lyOwMDcCK3P88p7HH9R49hG3vTpR5keCbc6hY4=",
+            "type": "github"
+        },
+        "version": "b3e35ab0852d6779403ada84b1f1be03692f507a"
+    },
+    "fish-ghq": {
+        "cargoLocks": null,
+        "date": "2021-07-16",
+        "extract": null,
+        "name": "fish-ghq",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "decors",
+            "repo": "fish-ghq",
+            "rev": "cafaaabe63c124bf0714f89ec715cfe9ece87fa2",
+            "sha256": "sha256-6b1zmjtemNLNPx4qsXtm27AbtjwIZWkzJAo21/aVZzM=",
+            "type": "github"
+        },
+        "version": "cafaaabe63c124bf0714f89ec715cfe9ece87fa2"
+    }
+}
