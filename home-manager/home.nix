@@ -28,8 +28,6 @@ in
     emacs
     nil
     nixfmt-rfc-style
-
-    fishPlugins.bobthefish
   ];
 
   home.file.".config/tig/config".source = ./tig/config;
@@ -198,6 +196,14 @@ in
       {
         name = sources.fish-bd.pname;
         src = sources.fish-bd.src;
+      }
+      # {
+      #   name = "bobthefish";
+      #   src = pkgs.fishPlugins.bobthefish.src;
+      # }
+      {
+        name = "pure";
+        src = pkgs.fishPlugins.pure.src;
       }
     ];
   };
