@@ -72,12 +72,18 @@
     enable = true;
     defaultEditor = true;
     viAlias = true;
-    extraConfig = ''
-      set number
-      set list
-      set expandtab
-      inoremap jj <Esc>
-    '';
+    extraPackages = with pkgs; [ gcc ];
+  };
+  home.file.".config/nvim" = {
+    source =
+      pkgs.fetchFromGitHub {
+        owner = "yuys13";
+        repo = "dotfiles";
+        rev = "a0581097794ed817e5a3ff8d6efdd4301230e09e";
+        sha256 = "ruEbTLFVkJ9MRp50GE77TolCDKmE8azQjkURO5NYtHY=";
+      }
+      + "/home/XDG_CONFIG_HOME/nvim";
+    recursive = true;
   };
 
   programs.bat.enable = true;
