@@ -10,7 +10,7 @@ set diff-options = -m --first-parent
 # color
 color cursor black green bold
 # line
-set line-graphics = utf-8
+# set line-graphics = utf-8
 
 ## escape default keybind
 # bind generic       g  view-grep
