@@ -3,27 +3,27 @@
 {
   dotfiles = {
     pname = "dotfiles";
-    version = "b926540a54107a2339635a2b141b38a1c69f51fb";
+    version = "8afd8cb24875289dabc62f9bb28c043b8af78b35";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "dotfiles";
-      rev = "b926540a54107a2339635a2b141b38a1c69f51fb";
+      rev = "8afd8cb24875289dabc62f9bb28c043b8af78b35";
       fetchSubmodules = false;
-      sha256 = "sha256-dKaY8VlG3IwwVxcubQAy/oMFkkfvjdMuSR2QO1xILbs=";
+      sha256 = "sha256-LBBaMkefMp9Ux6K/Q6SE4UZ+hN0YdmMTLshUHRG/DoM=";
     };
-    date = "2024-09-06";
+    date = "2024-09-07";
   };
   fish-autols = {
     pname = "fish-autols";
-    version = "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a";
+    version = "5bad7d5fd1bfa187006f1cec6b7016890cbd1e2f";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "autols.fish";
-      rev = "1c4b6852e46cb8dd343dff2e5eca1d4a95ea132a";
+      rev = "5bad7d5fd1bfa187006f1cec6b7016890cbd1e2f";
       fetchSubmodules = false;
-      sha256 = "sha256-zstnuTWAd0LeJRKauFCoSRbnu9T+21aHtLhYx9Wq56w=";
+      sha256 = "sha256-v2lrurz28qMmChKj8S1ZY65xOn6U0tHBTDjSK4xD6tY=";
     };
-    date = "2021-11-15";
+    date = "2024-09-07";
   };
   fish-bd = {
     pname = "fish-bd";
