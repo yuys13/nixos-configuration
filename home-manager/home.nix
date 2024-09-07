@@ -78,7 +78,10 @@ in
     enable = true;
     defaultEditor = true;
     viAlias = true;
-    extraPackages = with pkgs; [ gcc ];
+    extraPackages = with pkgs; [
+      gcc
+      gitlint
+    ];
   };
   home.file.".config/nvim" = {
     source = sources.dotfiles.src + "/home/XDG_CONFIG_HOME/nvim";
