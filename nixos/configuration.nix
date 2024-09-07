@@ -10,6 +10,31 @@
     ./hardware-configuration.nix
   ];
 
+  # Hyper-V settings
+  boot.blacklistedKernelModules = [ "hyperv_fb" ];
+  boot.kernel.sysctl."vm.overcommit_memory" = "1";
+
+  # Sway minimal settings
+  services.gnome.gnome-keyring.enable = true;
+  services.xserver.enable = true;
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      font-awesome
+      source-han-sans
+      source-han-sans-japanese
+      source-han-serif-japanese
+      hackgen-nf-font
+    ];
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -77,6 +102,8 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    hackgen-nf-font
+    wlr-randr
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
