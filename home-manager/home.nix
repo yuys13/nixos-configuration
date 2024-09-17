@@ -79,6 +79,7 @@ in
     defaultEditor = true;
     viAlias = true;
     extraPackages = with pkgs; [
+      neovim-remote
       gcc
       gitlint
     ];
