@@ -41,11 +41,16 @@ in
     };
   };
 
-  # wayland.windowManager.sway = {
-  #   enable = true;
-  #   extraConfig = ''
-  #     output Virtual-1 resolution 1920x1080
-  #   '';
-  # };
+  wayland.windowManager.sway = {
+    enable = true;
+    config = {
+      bars = [ { command = "${pkgs.waybar}/bin/waybar"; } ];
+      defaultWorkspace = "workspace number 1";
+      modifier = "Mod4";
+    };
+    extraConfig = ''
+      output Virtual-1 resolution 1920x1080
+    '';
+  };
 
 }
