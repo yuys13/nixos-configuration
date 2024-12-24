@@ -28,6 +28,9 @@ in
     emacs
     nil
     nixfmt-rfc-style
+    stylua
+    selene
+    lua-language-server
   ];
 
   home.file.".config/tig/config".source = ./tig/config;
