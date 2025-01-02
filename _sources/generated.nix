@@ -3,15 +3,15 @@
 {
   dotfiles = {
     pname = "dotfiles";
-    version = "cae4ca3d53c6e5ef5dcd0c89c1acaba0d08a6b9f";
+    version = "82dbe09109cf1d565950b642b22b1e841385bbb8";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "dotfiles";
-      rev = "cae4ca3d53c6e5ef5dcd0c89c1acaba0d08a6b9f";
+      rev = "82dbe09109cf1d565950b642b22b1e841385bbb8";
       fetchSubmodules = false;
-      sha256 = "sha256-6AL0vyRvmt+kFXafmImQI1RyzeGUOAVflLwFE/uErfw=";
+      sha256 = "sha256-7GGjaMotySl99TDmBf/iLkEEfKTFeg1ZBUxdqPWsmIU=";
     };
-    date = "2024-12-23";
+    date = "2024-12-29";
   };
   fish-autols = {
     pname = "fish-autols";
