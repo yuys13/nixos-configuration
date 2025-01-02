@@ -11,8 +11,6 @@ in
   home.homeDirectory = "/home/yuys13";
 
   home.packages = with pkgs; [
-    fastfetch
-
     zip
     xz
     unzip
