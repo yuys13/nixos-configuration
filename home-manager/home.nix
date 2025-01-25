@@ -125,6 +125,12 @@ in
       set-option -sa terminal-overrides ",''${TERM}:Tc"
       set-option -g focus-events on
 
+      # split
+      bind '"' split-window -v -c "#{pane_current_path}"
+      bind - split-window -v -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+      bind | split-window -h -c "#{pane_current_path}"
+
       bind -r n next-window
       bind -r p previous-window
       bind -r C-n next-window
