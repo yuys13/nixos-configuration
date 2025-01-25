@@ -9,14 +9,24 @@ src.branch = "master"
 fetch.github = "decors/fish-ghq"
 
 [fish-autols]
-src.git = "https://github.com/yuys13/autols.fish"
+src.git = "https://github.com/yuys13/fish-autols"
 src.branch = "main"
-fetch.github = "yuys13/autols.fish"
+fetch.github = "yuys13/fish-autols"
 
 [fish-gcd]
-src.git = "https://github.com/yuys13/gcd.fish"
+src.git = "https://github.com/yuys13/fish-gcd"
 src.branch = "main"
-fetch.github = "yuys13/gcd.fish"
+fetch.github = "yuys13/fish-gcd"
+
+[fish-ghq-fzf]
+src.git = "https://github.com/yuys13/fish-ghq-fzf"
+src.branch = "main"
+fetch.github = "yuys13/fish-ghq-fzf"
+
+[fish-pathed]
+src.git = "https://github.com/yuys13/fish-pathed"
+src.branch = "main"
+fetch.github = "yuys13/fish-pathed"
 
 [fish-bd]
 src.git = "https://github.com/0rax/fish-bd"

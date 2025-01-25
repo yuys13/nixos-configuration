@@ -169,10 +169,6 @@ in
     '';
     plugins = [
       {
-        name = sources.fish-ghq.pname;
-        src = sources.fish-ghq.src;
-      }
-      {
         name = sources.fish-autols.pname;
         src = sources.fish-autols.src;
       }
@@ -184,13 +180,25 @@ in
         name = sources.fish-bd.pname;
         src = sources.fish-bd.src;
       }
+      {
+        name = sources.fish-pathed.pname;
+        src = sources.fish-pathed.src;
+      }
+      {
+        name = sources.fish-ghq-fzf.pname;
+        src = sources.fish-ghq-fzf.src;
+      }
       # {
       #   name = "bobthefish";
       #   src = pkgs.fishPlugins.bobthefish.src;
       # }
+      # {
+      #   name = "pure";
+      #   src = pkgs.fishPlugins.pure.src;
+      # }
       {
-        name = "pure";
-        src = pkgs.fishPlugins.pure.src;
+        name = "tide";
+        src = pkgs.fishPlugins.tide.src;
       }
     ];
   };
