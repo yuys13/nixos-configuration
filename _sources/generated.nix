@@ -3,27 +3,27 @@
 {
   dotfiles = {
     pname = "dotfiles";
-    version = "4f18815901d2aa6924d91f910d01fecc4e61cc84";
+    version = "7ec857a26389199d081746e581e2eef7c97fedee";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "dotfiles";
-      rev = "4f18815901d2aa6924d91f910d01fecc4e61cc84";
+      rev = "7ec857a26389199d081746e581e2eef7c97fedee";
       fetchSubmodules = false;
-      sha256 = "sha256-mM0nr6BE67JgmxqtUt/bLowExAJ1KKMxP6rP8gUKdOI=";
+      sha256 = "sha256-kCP7kMA4Nnb6PNI1DzejKgGLdnGbEttAPBQCYgzYSDY=";
     };
-    date = "2025-01-25";
+    date = "2025-01-26";
   };
   fish-autols = {
     pname = "fish-autols";
-    version = "0ff5c2666a5454ae67215ab28a448e7036474c9c";
+    version = "74c52a3f66b5b9f589871c4383e7d7c2e543032c";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "fish-autols";
-      rev = "0ff5c2666a5454ae67215ab28a448e7036474c9c";
+      rev = "74c52a3f66b5b9f589871c4383e7d7c2e543032c";
       fetchSubmodules = false;
-      sha256 = "sha256-/jc6Zj3ZcNFOoMBlsbdbvilF+bX+mtsyLPkqQ6Wd7Ek=";
+      sha256 = "sha256-5yb6UjPu+QFsR+fe1rzYgSUczQ6olbFgILUQNTGvnf8=";
     };
-    date = "2025-01-25";
+    date = "2025-01-26";
   };
   fish-bd = {
     pname = "fish-bd";
@@ -36,6 +36,30 @@
       sha256 = "sha256-GeWjoakXa0t2TsMC/wpLEmsSVGhHFhBVK3v9eyQdzv0=";
     };
     date = "2022-03-04";
+  };
+  fish-cdf = {
+    pname = "fish-cdf";
+    version = "a95160caa9752845675e8bb7258b024d4252eb09";
+    src = fetchFromGitHub {
+      owner = "yuys13";
+      repo = "fish-cdf";
+      rev = "a95160caa9752845675e8bb7258b024d4252eb09";
+      fetchSubmodules = false;
+      sha256 = "sha256-rEdWmCj0h9ye9ooTw9h1WsIYAb4HdRqsx1+NK/OHxhs=";
+    };
+    date = "2025-01-26";
+  };
+  fish-fzf-bd = {
+    pname = "fish-fzf-bd";
+    version = "b465755ebab6992e4fa8bfa013eb57a140aa8a2b";
+    src = fetchFromGitHub {
+      owner = "yuys13";
+      repo = "fish-fzf-bd";
+      rev = "b465755ebab6992e4fa8bfa013eb57a140aa8a2b";
+      fetchSubmodules = false;
+      sha256 = "sha256-BKDTCyFQuuNYLMB3Q/8xvf7/Ua6u8tVxKGKlgS3Z62Q=";
+    };
+    date = "2025-01-26";
   };
   fish-gcd = {
     pname = "fish-gcd";
@@ -63,15 +87,15 @@
   };
   fish-ghq-fzf = {
     pname = "fish-ghq-fzf";
-    version = "153604d111e080cb8a66c5af5b5fd9d0ad3fda25";
+    version = "49b72497c8bb83f644384b51c758264fc749a9da";
     src = fetchFromGitHub {
       owner = "yuys13";
       repo = "fish-ghq-fzf";
-      rev = "153604d111e080cb8a66c5af5b5fd9d0ad3fda25";
+      rev = "49b72497c8bb83f644384b51c758264fc749a9da";
       fetchSubmodules = false;
-      sha256 = "sha256-NxO8qU88kEGGTXtyl7Za0mE1QoRCG6ihJ8I4QVvUFdM=";
+      sha256 = "sha256-3YNt1OH/eCt2Omw+M0PCm4Y0pSPzI/qir8R43u9m9Mo=";
     };
-    date = "2025-01-25";
+    date = "2025-01-26";
   };
   fish-pathed = {
     pname = "fish-pathed";

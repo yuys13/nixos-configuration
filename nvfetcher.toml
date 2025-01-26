@@ -13,6 +13,16 @@ src.git = "https://github.com/yuys13/fish-autols"
 src.branch = "main"
 fetch.github = "yuys13/fish-autols"
 
+[fish-cdf]
+src.git = "https://github.com/yuys13/fish-cdf"
+src.branch = "main"
+fetch.github = "yuys13/fish-cdf"
+
+[fish-fzf-bd]
+src.git = "https://github.com/yuys13/fish-fzf-bd"
+src.branch = "main"
+fetch.github = "yuys13/fish-fzf-bd"
+
 [fish-gcd]
 src.git = "https://github.com/yuys13/fish-gcd"
 src.branch = "main"

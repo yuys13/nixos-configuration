@@ -169,22 +169,22 @@ in
 
   programs.fish = {
     enable = true;
-    shellInit = ''
-      # for auto_ls
-      set -g autols_cmd ls
-    '';
     plugins = [
       {
         name = sources.fish-autols.pname;
         src = sources.fish-autols.src;
       }
       {
-        name = sources.fish-gcd.pname;
-        src = sources.fish-gcd.src;
+        name = sources.fish-cdf.pname;
+        src = sources.fish-cdf.src;
       }
       {
-        name = sources.fish-bd.pname;
-        src = sources.fish-bd.src;
+        name = sources.fish-fzf-bd.pname;
+        src = sources.fish-fzf-bd.src;
+      }
+      {
+        name = sources.fish-gcd.pname;
+        src = sources.fish-gcd.src;
       }
       {
         name = sources.fish-pathed.pname;
