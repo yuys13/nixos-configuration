@@ -45,11 +45,16 @@ in
         verbose = true;
       };
       push = {
-        default = "current";
+        default = "simple";
+        autoSetupRemote = true;
         useForceIfInclues = true;
       };
       pull = {
         ff = "only";
+      };
+      rebase = {
+        autoStash = true;
+        autoSquash = true;
       };
       diff = {
         tool = "nvimdiff";
