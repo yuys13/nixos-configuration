@@ -1,7 +1,7 @@
 {
     "dotfiles": {
         "cargoLocks": null,
-        "date": "2025-04-28",
+        "date": "2025-05-07",
         "extract": null,
         "name": "dotfiles",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "yuys13",
             "repo": "dotfiles",
-            "rev": "36651ef7eb1ceb39266083ce1fd85bb2a07e6ea6",
-            "sha256": "sha256-+k3Ck5z4vWf83L3nQr397X7BsEMrgHhCF8E+UaD+M94=",
+            "rev": "b8e90ae26af763c30d08a78509e96e7c43fc3ad4",
+            "sha256": "sha256-Hpn18l7Rp375JUkN4j5pbsBwF8agM6W6m9eBwXK61yo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "36651ef7eb1ceb39266083ce1fd85bb2a07e6ea6"
+        "version": "b8e90ae26af763c30d08a78509e96e7c43fc3ad4"
     },
     "fish-autols": {
         "cargoLocks": null,
