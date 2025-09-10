@@ -88,6 +88,7 @@ in
       neovim-remote
       gcc
       gitlint
+      tree-sitter
     ];
   };
   home.file.".config/nvim" = {
