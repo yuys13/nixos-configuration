@@ -35,9 +35,11 @@ in
 
   programs.git = {
     enable = true;
-    userName = "yuys13";
-    userEmail = "yuys13@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "yuys13";
+        email = "yuys13@users.noreply.github.com";
+      };
       init = {
         defaultbranch = "main";
       };
