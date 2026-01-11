@@ -25,7 +25,7 @@ in
 
     emacs
     nil
-    nixfmt-rfc-style
+    nixfmt
     stylua
     selene
     lua-language-server
