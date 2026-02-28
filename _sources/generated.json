@@ -1,7 +1,7 @@
 {
     "dotfiles": {
-        "cargoLocks": null,
-        "date": "2026-01-11",
+        "cargoLock": null,
+        "date": "2026-02-12",
         "extract": null,
         "name": "dotfiles",
         "passthru": null,
@@ -13,15 +13,15 @@
             "name": null,
             "owner": "yuys13",
             "repo": "dotfiles",
-            "rev": "1f0fef082f2415aeca32bfe89bf5848b4873bc53",
-            "sha256": "sha256-0Q8JJ2kyo/N6HYuEkXr3vDX6Hj6K14ROiX9VXrzEkqo=",
+            "rev": "d7178fc445e396f490cce342ec24df06d1ad3534",
+            "sha256": "sha256-e5mhHjGOAwwsMlhcJy0fSKAWd79lDV/V+3bmdy2X/tU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1f0fef082f2415aeca32bfe89bf5848b4873bc53"
+        "version": "d7178fc445e396f490cce342ec24df06d1ad3534"
     },
     "fish-autols": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-26",
         "extract": null,
         "name": "fish-autols",
@@ -42,7 +42,7 @@
         "version": "74c52a3f66b5b9f589871c4383e7d7c2e543032c"
     },
     "fish-bd": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2022-03-04",
         "extract": null,
         "name": "fish-bd",
@@ -63,7 +63,7 @@
         "version": "ab686e028bfe95fa561a4f4e57840e36902d4d7d"
     },
     "fish-cdf": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-27",
         "extract": null,
         "name": "fish-cdf",
@@ -84,7 +84,7 @@
         "version": "467f549ef6f8b1d8d18a429639f87870b23eef62"
     },
     "fish-fzf-bd": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-27",
         "extract": null,
         "name": "fish-fzf-bd",
@@ -105,7 +105,7 @@
         "version": "fcbe9f6a75510365638dc6f790544c55ecb0ec3b"
     },
     "fish-gcd": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-25",
         "extract": null,
         "name": "fish-gcd",
@@ -126,7 +126,7 @@
         "version": "e42ccc3c48ecaf2a8efb8a12d7426a8a7fd077e3"
     },
     "fish-ghq": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2021-07-16",
         "extract": null,
         "name": "fish-ghq",
@@ -147,7 +147,7 @@
         "version": "cafaaabe63c124bf0714f89ec715cfe9ece87fa2"
     },
     "fish-ghq-fzf": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-27",
         "extract": null,
         "name": "fish-ghq-fzf",
@@ -168,7 +168,7 @@
         "version": "9798eadadda71c3cb43502f88cfce1f9521ee185"
     },
     "fish-pathed": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-01-25",
         "extract": null,
         "name": "fish-pathed",
