@@ -38,7 +38,12 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.yuys13 = import ./home-manager/sway.nix;
+              home-manager.users.yuys13 = {
+                imports = [
+                  ./home-manager/sway.nix
+                  ./home-manager/home.nix
+                ];
+              };
             }
           ];
         };

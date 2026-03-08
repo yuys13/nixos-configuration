@@ -7,8 +7,6 @@ let
   sources = pkgs.callPackage ../_sources/generated.nix { };
 in
 {
-  imports = [ ./home.nix ];
-
   programs.foot = {
     enable = true;
     settings = {
