@@ -81,6 +81,10 @@ in
     ignores = [
       ".envrc"
       ".direnv"
+      # nvim 'exrc'
+      ".nvim.lua"
+      ".nvimrc"
+      ".exrc"
     ];
   };
 
