@@ -78,6 +78,10 @@ in
         root = "~/src";
       };
     };
+    ignores = [
+      ".envrc"
+      ".direnv"
+    ];
   };
 
   programs.gh.enable = true;
@@ -113,6 +117,12 @@ in
     fileWidgetOptions = [
       "--preview 'bat --color=always --style=header,grid --line-range :100 {}'"
     ];
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableFishIntegration = true;
   };
 
   programs.tmux = {
