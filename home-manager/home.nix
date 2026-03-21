@@ -25,6 +25,7 @@ in
 
     emacs
     nil
+    nixd
     nixfmt
     stylua
     selene
