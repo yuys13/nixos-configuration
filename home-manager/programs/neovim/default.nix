@@ -14,7 +14,7 @@ in
       tree-sitter
     ];
   };
-  home.file.".config/nvim" = {
+  xdg.configFile."nvim" = {
     source = sources.dotfiles.src + "/home/XDG_CONFIG_HOME/nvim";
     recursive = true;
   };
