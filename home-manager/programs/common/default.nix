@@ -19,6 +19,5 @@
     lua-language-server
   ];
 
-  programs.bat.enable = true;
   programs.fd.enable = true;
 }

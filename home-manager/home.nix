@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./programs/common
+    ./programs/bat
     ./programs/git
     ./programs/neovim
     ./programs/tmux
