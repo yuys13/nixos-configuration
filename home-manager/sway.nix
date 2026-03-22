@@ -1,18 +1,9 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-let
-  sources = pkgs.callPackage ../_sources/generated.nix { };
-in
-{
+{ pkgs, ... }: {
   programs.foot = {
     enable = true;
     settings = {
       main = {
         term = "xterm-256color";
-
         font = "HackGen Console NF:size=14";
       };
       mouse = {
@@ -50,5 +41,4 @@ in
       output Virtual-1 resolution 1920x1080
     '';
   };
-
 }
