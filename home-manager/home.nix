@@ -13,6 +13,7 @@
     ./programs/fzf
     ./programs/direnv
     ./programs/tig
+    ./programs/pip
   ];
 
   home = {
