@@ -35,5 +35,9 @@ in
         src = pkgs.fishPlugins.tide.src;
       }
     ];
+    interactiveShellInit = ''
+      # Workaround for tide prompt icon issue in fish 4.3+
+      set -gx tide_character_vi_icon_default "❯"
+    '';
   };
 }
