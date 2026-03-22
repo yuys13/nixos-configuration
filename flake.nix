@@ -16,6 +16,12 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+
+    # Treefmt nix
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,10 +30,15 @@
       nixpkgs,
       home-manager,
       flake-parts,
+      treefmt-nix,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
+
+      imports = [
+        treefmt-nix.flakeModule
+      ];
 
       flake = {
         # NixOS configuration entrypoint
@@ -78,14 +89,19 @@
       perSystem =
         {
           config,
-          self',
-          inputs',
           pkgs,
-          system,
           ...
         }:
         {
-          # ... your perSystem configuration here ...
+          treefmt.config = {
+            projectRootFile = "flake.nix";
+            programs = {
+              biome.enable = true;
+              nixfmt.enable = true;
+              taplo.enable = true;
+            };
+            settings.global.excludes = [ "_sources/**" ];
+          };
         };
     };
 }

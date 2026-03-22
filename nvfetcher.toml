@@ -42,4 +42,3 @@ fetch.github = "yuys13/fish-pathed"
 src.git = "https://github.com/0rax/fish-bd"
 src.branch = "master"
 fetch.github = "0rax/fish-bd"
-
