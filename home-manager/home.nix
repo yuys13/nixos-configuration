@@ -14,10 +14,11 @@
     ./programs/tig
   ];
 
-  home.username = "yuys13";
-  home.homeDirectory = "/home/yuys13";
-
-  home.stateVersion = "24.05";
+  home = {
+    username = "yuys13";
+    homeDirectory = "/home/yuys13";
+    stateVersion = "24.05";
+  };
 
   programs.home-manager.enable = true;
 }
