@@ -24,4 +24,10 @@ in
   xdg.configFile."fish/functions/vi.fish" = {
     source = sources.dotfiles.src + "/home/XDG_CONFIG_HOME/fish/functions/vi.fish";
   };
+
+  programs.git.ignores = [
+    ".nvim.lua"
+    ".nvimrc"
+    ".exrc"
+  ];
 }

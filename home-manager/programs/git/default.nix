@@ -45,14 +45,6 @@
         root = "~/src";
       };
     };
-    ignores = [
-      ".envrc"
-      ".direnv"
-      # nvim 'exrc'
-      ".nvim.lua"
-      ".nvimrc"
-      ".exrc"
-    ];
   };
 
   programs.gh.enable = true;
