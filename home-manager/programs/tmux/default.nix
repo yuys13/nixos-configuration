@@ -10,12 +10,12 @@
     prefix = "C-q";
     mouse = true;
     shell = "${pkgs.fish}/bin/fish";
-    terminal = "screen-256color";
+    terminal = "tmux-256color";
     extraConfig = ''
       bind r source-file ~/.config/tmux/tmux.conf \; display Reroaded!
 
       # terminal settings
-      set-option -sa terminal-overrides ",''${TERM}:Tc"
+      set-option -as terminal-features "*:RGB"
       set-option -g focus-events on
 
       # split
