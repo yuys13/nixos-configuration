@@ -42,3 +42,78 @@ fetch.github = "yuys13/fish-pathed"
 src.git = "https://github.com/0rax/fish-bd"
 src.branch = "master"
 fetch.github = "0rax/fish-bd"
+
+[vim-dmacro]
+src.git = "https://github.com/tani/dmacro.vim"
+src.branch = "main"
+fetch.github = "tani/dmacro.vim"
+
+[vim-quickhl]
+src.git = "https://github.com/t9md/vim-quickhl"
+src.branch = "master"
+fetch.github = "t9md/vim-quickhl"
+
+[eskk-vim]
+src.git = "https://github.com/vim-skk/eskk.vim"
+src.branch = "master"
+fetch.github = "vim-skk/eskk.vim"
+
+[skkdict-vim]
+src.git = "https://github.com/vim-skk/skkdict.vim"
+src.branch = "master"
+fetch.github = "vim-skk/skkdict.vim"
+
+[hackshark-nvim]
+src.git = "https://github.com/yuys13/hackshark.nvim"
+src.branch = "main"
+fetch.github = "yuys13/hackshark.nvim"
+
+[vim-capture]
+src.git = "https://github.com/tyru/capture.vim"
+src.branch = "master"
+fetch.github = "tyru/capture.vim"
+
+[vim-linediff]
+src.git = "https://github.com/AndrewRadev/linediff.vim"
+src.branch = "main"
+fetch.github = "AndrewRadev/linediff.vim"
+
+[vim-voir]
+src.git = "https://github.com/PierreCapo/voir.vim"
+src.branch = "master"
+fetch.github = "PierreCapo/voir.vim"
+
+[vim-seoul256]
+src.git = "https://github.com/junegunn/seoul256.vim"
+src.branch = "master"
+fetch.github = "junegunn/seoul256.vim"
+
+[vim-edge]
+src.git = "https://github.com/sainnhe/edge"
+src.branch = "master"
+fetch.github = "sainnhe/edge"
+
+[vim-onedark]
+src.git = "https://github.com/joshdick/onedark.vim"
+src.branch = "main"
+fetch.github = "joshdick/onedark.vim"
+
+[vim-molokai]
+src.git = "https://github.com/tomasr/molokai"
+src.branch = "master"
+fetch.github = "tomasr/molokai"
+
+[vim-dichromatic]
+src.git = "https://github.com/romainl/vim-dichromatic"
+src.branch = "master"
+fetch.github = "romainl/vim-dichromatic"
+
+[vim-tatami]
+src.git = "https://github.com/machakann/vim-colorscheme-tatami"
+src.branch = "master"
+fetch.github = "machakann/vim-colorscheme-tatami"
+
+[vim-lucius]
+src.git = "https://github.com/jonathanfilip/vim-lucius"
+src.branch = "master"
+fetch.github = "jonathanfilip/vim-lucius"

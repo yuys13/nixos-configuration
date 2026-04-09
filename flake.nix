@@ -22,6 +22,12 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # NixVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -31,6 +37,7 @@
       home-manager,
       flake-parts,
       treefmt-nix,
+      nixvim,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -63,6 +70,7 @@
                   imports = [
                     ./home-manager/sway.nix
                     ./home-manager/home.nix
+                    nixvim.homeModules.nixvim
                   ];
                 };
               }
@@ -81,7 +89,10 @@
               outputs = self.outputs;
             };
             # > Our main home-manager configuration file <
-            modules = [ ./home-manager/home.nix ];
+            modules = [
+              ./home-manager/home.nix
+              nixvim.homeModules.nixvim
+            ];
           };
         };
       };
@@ -98,6 +109,7 @@
             programs = {
               biome.enable = true;
               nixfmt.enable = true;
+              stylua.enable = true;
               taplo.enable = true;
             };
             settings.global.excludes = [ "_sources/**" ];
