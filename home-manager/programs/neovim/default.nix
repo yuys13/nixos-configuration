@@ -83,6 +83,36 @@ in
       showmode = false;
     };
 
+    diagnostic.settings = {
+      severity_sort = true;
+      virtual_text = {
+        # source = "if_many";
+      };
+      jump = {
+        on_jump.__raw = ''
+          function(_, bufnr)
+            vim.diagnostic.open_float { bufnr = bufnr, scope = 'cursor', focus = false }
+          end
+        '';
+      };
+      float = {
+        # source = "if_many";
+        border = "single";
+        title = "Diagnostics";
+        header = { };
+        suffix = { };
+        format.__raw = ''
+          function(diag)
+            if diag.code then
+              return string.format('[%s](%s): %s', diag.source, diag.code, diag.message)
+            else
+              return string.format('[%s]: %s', diag.source, diag.message)
+            end
+          end
+        '';
+      };
+    };
+
     # Global Keymaps
     keymaps = [
       {
