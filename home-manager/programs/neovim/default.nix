@@ -528,6 +528,44 @@ in
             checkmake.enable = true;
             markdownlint.enable = true;
             vint.enable = true;
+            cspell = {
+              enable = true;
+              settings = {
+                condition.__raw = ''
+                  function(utils)
+                    return utils.root_has_file({
+                      'cspell.json',
+                      '.cspell.json',
+                      'cSpell.json',
+                      '.cspell.config.json',
+                    })
+                  end
+                '';
+                diagnostics_postprocess.__raw = ''
+                  function(diag)
+                    diag.severity = vim.diagnostic.severity['INFO']
+                  end
+                '';
+              };
+            };
+          };
+          code_actions = {
+            gitsigns.enable = true;
+            cspell = {
+              enable = true;
+              settings = {
+                condition.__raw = ''
+                  function(utils)
+                    return utils.root_has_file({
+                      'cspell.json',
+                      '.cspell.json',
+                      'cSpell.json',
+                      '.cspell.config.json',
+                    })
+                  end
+                '';
+              };
+            };
           };
         };
       };
@@ -560,6 +598,7 @@ in
       pkgs.vimPlugins.kanagawa-nvim
       pkgs.vimPlugins.Recover-vim
       pkgs.vimPlugins.open-browser-vim
+      pkgs.vimPlugins.cspell-nvim
       pkgs.vimPlugins.cellular-automaton-nvim
       pkgs.vimPlugins.nvim_context_vt
       pkgs.vimPlugins.nvim-ts-context-commentstring
