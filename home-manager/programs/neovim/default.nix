@@ -208,24 +208,30 @@ in
         action.__raw = "function() Snacks.picker.lines() end";
         options.desc = "Buffer Lines";
       }
-      # ToggleTerm
+      # neoterm
       {
         mode = "n";
-        key = "<Space>nt";
-        action = "<Cmd>ToggleTerm<CR>";
-        options.desc = "Toggle Terminal";
+        key = "<Space>nl";
+        action = "<Cmd>rightbelow vertical Tnew<CR>";
+        options.desc = "Open neoterm on right";
+      }
+      {
+        mode = "n";
+        key = "<Space>nh";
+        action = "<Cmd>vertical Tnew<CR>";
+        options.desc = "Open neoterm on left";
       }
       {
         mode = "n";
         key = "<Space>nn";
-        action = "<Cmd>ToggleTermSendCurrentLine<CR>";
-        options.desc = "Send current line to terminal";
+        action = "<Plug>(neoterm-repl-send-line)";
+        options.desc = "Send current line to neoterm";
       }
       {
         mode = "x";
         key = "<Space>nn";
-        action = "<Cmd>ToggleTermSendVisualSelection<CR>";
-        options.desc = "Send visual selection to terminal";
+        action = "<Plug>(neoterm-repl-send)";
+        options.desc = "Send visual selection to neoterm";
       }
       # NvimTree
       {
@@ -518,10 +524,6 @@ in
       nvim-autopairs.enable = true;
       fidget.enable = true;
       markdown-preview.enable = true;
-      toggleterm = {
-        enable = true;
-        settings.direction = "float";
-      };
       nvim-surround.enable = true;
       dial.enable = true;
       quicker.enable = true;
@@ -642,6 +644,7 @@ in
       pkgs.vimPlugins.Recover-vim
       pkgs.vimPlugins.open-browser-vim
       pkgs.vimPlugins.cspell-nvim
+      pkgs.vimPlugins.neoterm
       pkgs.vimPlugins.cellular-automaton-nvim
       pkgs.vimPlugins.nvim_context_vt
       pkgs.vimPlugins.nvim-ts-context-commentstring
