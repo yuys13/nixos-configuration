@@ -53,6 +53,18 @@ in
   # Link the merged dictionary to the expected path 💎
   home.file.".local/share/nvim/eskk/SKK-JISYO.L".source = "${merged-skk-jisyo}/SKK-JISYO.L";
 
+  programs.fish.functions.vi = {
+    wraps = "$EDITOR";
+    description = "alias vi $EDITOR";
+    body = ''
+      if test -z "$EDITOR"
+          command vi $argv
+      else
+          eval $EDITOR $argv
+      end
+    '';
+  };
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;

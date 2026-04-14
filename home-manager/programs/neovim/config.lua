@@ -37,3 +37,7 @@ vim.api.nvim_create_autocmd("User", {
 		vim.keymap.set("l", "zl", "→", { buffer = args.buf })
 	end,
 })
+
+-- Don't nest neovim
+vim.env.EDITOR = 'nvr -cc split -c "set bufhidden=delete" --remote-wait'
+vim.env.MANPAGER = nil
