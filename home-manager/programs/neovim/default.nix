@@ -1,25 +1,6 @@
 { pkgs, ... }:
 let
   sources = pkgs.callPackage ../../../_sources/generated.nix { };
-  buildVimPlugin = name: src: pkgs.vimUtils.buildVimPlugin { inherit name src; };
-
-  vim-dmacro = buildVimPlugin "vim-dmacro" sources.vim-dmacro.src;
-  vim-quickhl = buildVimPlugin "vim-quickhl" sources.vim-quickhl.src;
-  eskk-vim = buildVimPlugin "eskk-vim" sources.eskk-vim.src;
-  skkdict-vim = buildVimPlugin "skkdict-vim" sources.skkdict-vim.src;
-  hackshark-nvim = buildVimPlugin "hackshark-nvim" sources.hackshark-nvim.src;
-  vim-capture = buildVimPlugin "vim-capture" sources.vim-capture.src;
-  vim-linediff = buildVimPlugin "vim-linediff" sources.vim-linediff.src;
-
-  # Colorschemes from nvfetcher
-  vim-voir = buildVimPlugin "vim-voir" sources.vim-voir.src;
-  vim-seoul256 = buildVimPlugin "vim-seoul256" sources.vim-seoul256.src;
-  vim-edge = buildVimPlugin "vim-edge" sources.vim-edge.src;
-  vim-onedark = buildVimPlugin "vim-onedark" sources.vim-onedark.src;
-  vim-molokai = buildVimPlugin "vim-molokai" sources.vim-molokai.src;
-  vim-dichromatic = buildVimPlugin "vim-dichromatic" sources.vim-dichromatic.src;
-  vim-tatami = buildVimPlugin "vim-tatami" sources.vim-tatami.src;
-  vim-lucius = buildVimPlugin "vim-lucius" sources.vim-lucius.src;
 
   # Build merged SKK dictionary at build time! ✨
   merged-skk-jisyo = pkgs.stdenv.mkDerivation {
@@ -631,13 +612,13 @@ in
 
     # Extra Plugins
     extraPlugins = [
-      vim-dmacro
-      vim-quickhl
-      eskk-vim
-      skkdict-vim
-      hackshark-nvim
-      vim-capture
-      vim-linediff
+      (pkgs.vimUtils.buildVimPlugin sources.vim-dmacro)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-quickhl)
+      (pkgs.vimUtils.buildVimPlugin sources.eskk-vim)
+      (pkgs.vimUtils.buildVimPlugin sources.skkdict-vim)
+      (pkgs.vimUtils.buildVimPlugin sources.hackshark-nvim)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-capture)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-linediff)
       pkgs.vimPlugins.catppuccin-nvim
       pkgs.vimPlugins.tokyonight-nvim
       pkgs.vimPlugins.kanagawa-nvim
@@ -648,14 +629,14 @@ in
       pkgs.vimPlugins.cellular-automaton-nvim
       pkgs.vimPlugins.nvim_context_vt
       pkgs.vimPlugins.nvim-ts-context-commentstring
-      vim-voir
-      vim-seoul256
-      vim-edge
-      vim-onedark
-      vim-molokai
-      vim-dichromatic
-      vim-tatami
-      vim-lucius
+      (pkgs.vimUtils.buildVimPlugin sources.vim-voir)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-seoul256)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-edge)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-onedark)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-molokai)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-dichromatic)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-tatami)
+      (pkgs.vimUtils.buildVimPlugin sources.vim-lucius)
     ];
 
     # Extra Lua Config (Read from separate file)
