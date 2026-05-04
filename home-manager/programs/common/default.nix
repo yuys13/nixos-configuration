@@ -12,8 +12,6 @@
     ghq
 
     emacs
-    nil
-    nixd
     nixfmt
     stylua
     selene

@@ -325,6 +325,7 @@ in
       # LSP
       lsp = {
         enable = true;
+        inlayHints = true;
         servers = {
           denols = {
             enable = true;
@@ -337,6 +338,12 @@ in
           yamlls = {
             enable = true;
             package = null;
+          };
+          nixd = {
+            enable = true;
+          };
+          nil_ls = {
+            enable = true;
           };
         };
         keymaps = {
