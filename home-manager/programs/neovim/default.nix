@@ -34,6 +34,12 @@ in
   # Link the merged dictionary to the expected path 💎
   home.file.".local/share/nvim/eskk/SKK-JISYO.L".source = "${merged-skk-jisyo}/SKK-JISYO.L";
 
+  programs.git.ignores = [
+    ".nvim.lua"
+    ".nvimrc"
+    ".exrc"
+  ];
+
   programs.fish.functions.vi = {
     wraps = "$EDITOR";
     description = "alias vi $EDITOR";
