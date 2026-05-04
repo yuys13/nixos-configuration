@@ -389,6 +389,14 @@ in
               "cmp.mapping(function(fallback) if vim.snippet.active({ direction = 1 }) then vim.snippet.jump(1) else fallback() end end, {'i', 's'})";
             "<S-Tab>" =
               "cmp.mapping(function(fallback) if vim.snippet.active({ direction = -1 }) then vim.snippet.jump(-1) else fallback() end end, {'i', 's'})";
+            "<Down>" = "cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select })";
+            "<Up>" = "cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select })";
+            "<C-n>" =
+              "cmp.mapping(function() if cmp.visible() then cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert }) else cmp.complete() end end)";
+            "<C-p>" =
+              "cmp.mapping(function() if cmp.visible() then cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) else cmp.complete() end end)";
+            "<C-y>" = "cmp.mapping.confirm({ select = false })";
+            "<C-e>" = "cmp.mapping.abort()";
           };
           sources = [
             {
