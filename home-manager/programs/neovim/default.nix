@@ -345,6 +345,9 @@ in
           nil_ls = {
             enable = true;
           };
+          lua_ls = {
+            enable = true;
+          };
         };
         keymaps = {
           silent = true;
@@ -369,6 +372,10 @@ in
       };
       schemastore.enable = true;
       lsp-signature-help.enable = true;
+      lazydev = {
+        enable = true;
+        settings.integrations.cmp = true;
+      };
 
       # Completion
       cmp = {
@@ -384,6 +391,10 @@ in
               "cmp.mapping(function(fallback) if vim.snippet.active({ direction = -1 }) then vim.snippet.jump(-1) else fallback() end end, {'i', 's'})";
           };
           sources = [
+            {
+              name = "lazydev";
+              group_index = 0;
+            }
             { name = "nvim_lsp"; }
             { name = "path"; }
             { name = "buffer"; }

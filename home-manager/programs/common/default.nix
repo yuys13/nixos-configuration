@@ -15,7 +15,6 @@
     nixfmt
     stylua
     selene
-    lua-language-server
   ];
 
   programs.fd.enable = true;
