@@ -43,6 +43,11 @@
       ];
       auto-optimise-store = pkgs.stdenv.hostPlatform.isLinux;
       warn-dirty = false;
+      trusted-users = [
+        "root"
+        "@wheel"
+      ]
+      ++ pkgs.lib.optional pkgs.stdenv.hostPlatform.isDarwin "@admin";
     };
     optimise.automatic = true;
     gc = {
