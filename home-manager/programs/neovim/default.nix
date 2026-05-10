@@ -572,6 +572,7 @@ in
               "injected"
             ];
             python = [ "ruff_format" ];
+            yaml = [ "yamlfmt" ];
           };
         };
       };
@@ -690,6 +691,7 @@ in
       checkmake
       markdownlint-cli
       ruff
+      yamlfmt
     ];
   };
 }
