@@ -390,7 +390,6 @@ in
           mapping = {
             "<C-b>" = "cmp.mapping.scroll_docs(-4)";
             "<C-f>" = "cmp.mapping.scroll_docs(4)";
-            "<Space>" = "cmp.mapping.confirm({ select = true })";
             "<Tab>" =
               "cmp.mapping(function(fallback) if vim.snippet.active({ direction = 1 }) then vim.snippet.jump(1) else fallback() end end, {'i', 's'})";
             "<S-Tab>" =
