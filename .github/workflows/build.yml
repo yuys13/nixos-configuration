@@ -1,4 +1,6 @@
 name: Build NixOS and Home Manager
+permissions:
+  contents: read
 on:
   push:
     branches:
