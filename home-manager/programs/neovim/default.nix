@@ -339,11 +339,9 @@ in
           };
           jsonls = {
             enable = true;
-            package = null;
           };
           yamlls = {
             enable = true;
-            package = null;
           };
           nixd = {
             enable = true;
