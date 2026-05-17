@@ -84,7 +84,10 @@
         homeConfigurations = {
           # FIXME replace with your username@hostname
           "yuys13" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+            pkgs = import nixpkgs {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+            }; # Home-manager requires 'pkgs' instance
             extraSpecialArgs = {
               inherit inputs;
               outputs = self.outputs;
