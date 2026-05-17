@@ -657,7 +657,6 @@ in
       pkgs.vimPlugins.cspell-nvim
       pkgs.vimPlugins.neoterm
       pkgs.vimPlugins.cellular-automaton-nvim
-      pkgs.vimPlugins.nvim_context_vt
       pkgs.vimPlugins.nvim-ts-context-commentstring
       (pkgs.vimUtils.buildVimPlugin sources.vim-voir)
       (pkgs.vimUtils.buildVimPlugin sources.vim-seoul256)
