@@ -19,6 +19,7 @@ jobs:
         with:
           name: yuys13
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          extraPullNames: nix-community
       - name: Flake check
         run: nix flake check --no-build --all-systems --keep-going
       - name: Build NixOS configuration
