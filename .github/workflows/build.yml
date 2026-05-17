@@ -23,6 +23,6 @@ jobs:
       - name: Flake check
         run: nix flake check --no-build --all-systems --keep-going
       - name: Build NixOS configuration
-        run: nix build .#nixosConfigurations.hyper-nixos.config.system.build.toplevel
+        run: nix build --keep-going --no-link --show-trace --eval-system x86_64-linux --print-out-paths .#nixosConfigurations.hyper-nixos.config.system.build.toplevel
       - name: Build Home Manager configuration
-        run: nix build .#homeConfigurations."yuys13".activationPackage
+        run: nix build --keep-going --no-link --show-trace --eval-system x86_64-linux --print-out-paths .#homeConfigurations."yuys13".activationPackage
