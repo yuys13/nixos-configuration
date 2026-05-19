@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "Paradise";
 
   nixConfig = {
     extra-substituters = [
@@ -13,28 +13,23 @@
   };
 
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-    # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Flake parts
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    # Treefmt nix
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # NixVim
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -75,15 +70,17 @@
 
               home-manager.nixosModules.home-manager
               {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
 
-                home-manager.users.yuys13 = {
-                  imports = [
-                    ./home-manager/sway.nix
-                    ./home-manager/home.nix
-                    nixvim.homeModules.nixvim
-                  ];
+                  users.yuys13 = {
+                    imports = [
+                      ./home-manager/sway.nix
+                      ./home-manager/home.nix
+                      nixvim.homeModules.nixvim
+                    ];
+                  };
                 };
               }
             ];
