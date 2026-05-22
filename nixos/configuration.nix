@@ -64,6 +64,10 @@
       options = "--delete-older-than 7d";
     };
   };
+  programs.nh.enable = true;
+  environment.variables = {
+    NH_SHOW_ACTIVATION_LOGS = "1";
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
