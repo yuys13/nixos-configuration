@@ -35,6 +35,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -45,6 +50,7 @@
       flake-parts,
       treefmt-nix,
       nixvim,
+      nix-index-database,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -79,6 +85,7 @@
                       ./home-manager/sway.nix
                       ./home-manager/home.nix
                       nixvim.homeModules.nixvim
+                      nix-index-database.homeModules.default
                     ];
                   };
                 };
@@ -104,6 +111,7 @@
             modules = [
               ./home-manager/home.nix
               nixvim.homeModules.nixvim
+              nix-index-database.homeModules.default
             ];
           };
         };
