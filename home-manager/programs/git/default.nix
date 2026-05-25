@@ -16,7 +16,7 @@
       push = {
         default = "simple";
         autoSetupRemote = true;
-        useForceIfInclues = true;
+        useForceIfIncludes = true;
       };
       pull = {
         ff = "only";
