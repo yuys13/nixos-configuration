@@ -41,9 +41,6 @@
       blame = {
         markIgnoredLines = true;
       };
-      ghq = {
-        root = "~/src";
-      };
     };
   };
 

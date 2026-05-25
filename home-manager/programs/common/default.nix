@@ -11,7 +11,6 @@
     ripgrep
     jq
     eza
-    ghq
 
     emacs
     nixfmt

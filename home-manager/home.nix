@@ -15,6 +15,7 @@
     ./programs/direnv
     ./programs/tig
     ./programs/pip
+    ./programs/ghq
   ];
 
   home = {
