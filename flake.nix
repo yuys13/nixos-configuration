@@ -30,11 +30,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,7 +43,6 @@
       home-manager,
       flake-parts,
       treefmt-nix,
-      nixvim,
       nix-index-database,
       ...
     }:
@@ -83,7 +77,6 @@
                     imports = [
                       ./home-manager/sway.nix
                       ./home-manager/home.nix
-                      nixvim.homeModules.nixvim
                       nix-index-database.homeModules.default
                     ];
                   };
@@ -109,7 +102,6 @@
             # > Our main home-manager configuration file <
             modules = [
               ./home-manager/home.nix
-              nixvim.homeModules.nixvim
               nix-index-database.homeModules.default
             ];
           };
