@@ -1,7 +1,5 @@
 { pkgs, ... }:
 let
-  sources = pkgs.callPackage ../../../_sources/generated.nix { };
-
   # Build merged SKK dictionary at build time! ✨
   merged-skk-jisyo = pkgs.stdenv.mkDerivation {
     name = "merged-skk-jisyo";

@@ -6,30 +6,6 @@
   dockerTools,
 }:
 {
-  dotfiles = {
-    pname = "dotfiles";
-    version = "36632a16d5c503e0ccbced9cbabf8bef1167861e";
-    src = fetchFromGitHub {
-      owner = "yuys13";
-      repo = "dotfiles";
-      rev = "36632a16d5c503e0ccbced9cbabf8bef1167861e";
-      fetchSubmodules = false;
-      sha256 = "sha256-ediRFsnGHUbxdp6jiWDA1PsLA/hh3atsa6t3tN+a0hM=";
-    };
-    date = "2026-03-30";
-  };
-  eskk-vim = {
-    pname = "eskk-vim";
-    version = "e530575790cca5d6603b8ab984298459ecf3c0c0";
-    src = fetchFromGitHub {
-      owner = "vim-skk";
-      repo = "eskk.vim";
-      rev = "e530575790cca5d6603b8ab984298459ecf3c0c0";
-      fetchSubmodules = false;
-      sha256 = "sha256-7nPzxCbKHBwplrTCsO4SxdFe/VK0VMHWDspWvVJvwLU=";
-    };
-    date = "2024-06-09";
-  };
   fish-autols = {
     pname = "fish-autols";
     version = "74c52a3f66b5b9f589871c4383e7d7c2e543032c";
@@ -41,18 +17,6 @@
       sha256 = "sha256-5yb6UjPu+QFsR+fe1rzYgSUczQ6olbFgILUQNTGvnf8=";
     };
     date = "2025-01-26";
-  };
-  fish-bd = {
-    pname = "fish-bd";
-    version = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
-    src = fetchFromGitHub {
-      owner = "0rax";
-      repo = "fish-bd";
-      rev = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
-      fetchSubmodules = false;
-      sha256 = "sha256-GeWjoakXa0t2TsMC/wpLEmsSVGhHFhBVK3v9eyQdzv0=";
-    };
-    date = "2022-03-04";
   };
   fish-cdf = {
     pname = "fish-cdf";
@@ -90,18 +54,6 @@
     };
     date = "2025-01-25";
   };
-  fish-ghq = {
-    pname = "fish-ghq";
-    version = "cafaaabe63c124bf0714f89ec715cfe9ece87fa2";
-    src = fetchFromGitHub {
-      owner = "decors";
-      repo = "fish-ghq";
-      rev = "cafaaabe63c124bf0714f89ec715cfe9ece87fa2";
-      fetchSubmodules = false;
-      sha256 = "sha256-6b1zmjtemNLNPx4qsXtm27AbtjwIZWkzJAo21/aVZzM=";
-    };
-    date = "2021-07-16";
-  };
   fish-ghq-fzf = {
     pname = "fish-ghq-fzf";
     version = "9798eadadda71c3cb43502f88cfce1f9521ee185";
@@ -125,173 +77,5 @@
       sha256 = "sha256-9KmgxaiaCnDXyXXAnvtZ+4YiCqD+mSOg1ymi0adjc5Y=";
     };
     date = "2025-01-25";
-  };
-  hackshark-nvim = {
-    pname = "hackshark-nvim";
-    version = "2d45011ed6287708d7190ad1d78c637d9322c4a9";
-    src = fetchFromGitHub {
-      owner = "yuys13";
-      repo = "hackshark.nvim";
-      rev = "2d45011ed6287708d7190ad1d78c637d9322c4a9";
-      fetchSubmodules = false;
-      sha256 = "sha256-UOTDukR2izWqnDzN5lFz0S7jLWUt9tRRIGgbxnCoL5k=";
-    };
-    date = "2023-01-05";
-  };
-  skkdict-vim = {
-    pname = "skkdict-vim";
-    version = "786effb02b40aaa5dce560aebb8323c572a9ca1e";
-    src = fetchFromGitHub {
-      owner = "vim-skk";
-      repo = "skkdict.vim";
-      rev = "786effb02b40aaa5dce560aebb8323c572a9ca1e";
-      fetchSubmodules = false;
-      sha256 = "sha256-6jUKC7PkcWSBApZ+TMi0CnMeJolztnNXd1+cca9dHYU=";
-    };
-    date = "2016-01-10";
-  };
-  vim-capture = {
-    pname = "vim-capture";
-    version = "857ee11cfe1193948d3d45dcb8d511fded8533fb";
-    src = fetchFromGitHub {
-      owner = "tyru";
-      repo = "capture.vim";
-      rev = "857ee11cfe1193948d3d45dcb8d511fded8533fb";
-      fetchSubmodules = false;
-      sha256 = "sha256-nYMNXdHFVaw6cFKGT9KiHzrlQ7u76WdA4UlvaII+bok=";
-    };
-    date = "2018-06-26";
-  };
-  vim-dichromatic = {
-    pname = "vim-dichromatic";
-    version = "9765a72ce24ddae48afe12c316583a22c82ad812";
-    src = fetchFromGitHub {
-      owner = "romainl";
-      repo = "vim-dichromatic";
-      rev = "9765a72ce24ddae48afe12c316583a22c82ad812";
-      fetchSubmodules = false;
-      sha256 = "sha256-1I7vU6kge/JqxkcsWp2dPTXWdF3a30hX7o3zNwV28mM=";
-    };
-    date = "2022-01-16";
-  };
-  vim-dmacro = {
-    pname = "vim-dmacro";
-    version = "25ab1df31d216c4ff7554c262f92b5c0c6b743f0";
-    src = fetchFromGitHub {
-      owner = "tani";
-      repo = "dmacro.vim";
-      rev = "25ab1df31d216c4ff7554c262f92b5c0c6b743f0";
-      fetchSubmodules = false;
-      sha256 = "sha256-jA8KDNDV3/4lOPxSNp3f0giNEIsubAe8dxiAYohslsg=";
-    };
-    date = "2024-12-18";
-  };
-  vim-edge = {
-    pname = "vim-edge";
-    version = "7ec78c21bd8f0b2b0b47043bb1e730c561647c72";
-    src = fetchFromGitHub {
-      owner = "sainnhe";
-      repo = "edge";
-      rev = "7ec78c21bd8f0b2b0b47043bb1e730c561647c72";
-      fetchSubmodules = false;
-      sha256 = "sha256-05fAaaaoaIrmwTFdrkX2rQX8X7AyOGLOcnz5HaoQB9Y=";
-    };
-    date = "2026-01-21";
-  };
-  vim-linediff = {
-    pname = "vim-linediff";
-    version = "29fa617fc10307a1e0ae82a8761114e465d17b06";
-    src = fetchFromGitHub {
-      owner = "AndrewRadev";
-      repo = "linediff.vim";
-      rev = "29fa617fc10307a1e0ae82a8761114e465d17b06";
-      fetchSubmodules = false;
-      sha256 = "sha256-53WWr63+89BYsE8Tyj216msCCRiitcnp7aYH+hUvQyI=";
-    };
-    date = "2025-11-28";
-  };
-  vim-lucius = {
-    pname = "vim-lucius";
-    version = "b5dea9864ae64714da4635993ad2fc2703e7c832";
-    src = fetchFromGitHub {
-      owner = "jonathanfilip";
-      repo = "vim-lucius";
-      rev = "b5dea9864ae64714da4635993ad2fc2703e7c832";
-      fetchSubmodules = false;
-      sha256 = "sha256-FlSqTEQyYm17vR7sNw5hlq2Hpz1cWYr23ARsVNibUBM=";
-    };
-    date = "2020-06-18";
-  };
-  vim-molokai = {
-    pname = "vim-molokai";
-    version = "c67bdfcdb31415aa0ade7f8c003261700a885476";
-    src = fetchFromGitHub {
-      owner = "tomasr";
-      repo = "molokai";
-      rev = "c67bdfcdb31415aa0ade7f8c003261700a885476";
-      fetchSubmodules = false;
-      sha256 = "sha256-OgzU7vm046T9gmxmqO3sRKCH0E9QAheYGoT7WbL8Ot4=";
-    };
-    date = "2015-11-11";
-  };
-  vim-onedark = {
-    pname = "vim-onedark";
-    version = "47bec7a6196a843dad195d2666c3ac84c6e80c78";
-    src = fetchFromGitHub {
-      owner = "joshdick";
-      repo = "onedark.vim";
-      rev = "47bec7a6196a843dad195d2666c3ac84c6e80c78";
-      fetchSubmodules = false;
-      sha256 = "sha256-vb2wGkul/NAjeV4zcpI3e9ozd9YI1LbwK85tq+hTcLA=";
-    };
-    date = "2026-01-14";
-  };
-  vim-quickhl = {
-    pname = "vim-quickhl";
-    version = "be1f44169c3fdee3beab629e83380515da03835e";
-    src = fetchFromGitHub {
-      owner = "t9md";
-      repo = "vim-quickhl";
-      rev = "be1f44169c3fdee3beab629e83380515da03835e";
-      fetchSubmodules = false;
-      sha256 = "sha256-8cVAdxfV+9tlYnuNL7uzx/dvYR2ZcgtIFSzwyPje/t4=";
-    };
-    date = "2021-09-01";
-  };
-  vim-seoul256 = {
-    pname = "vim-seoul256";
-    version = "d9a91d8d4e153274e1ecc0ceb05c37f0d0de84d7";
-    src = fetchFromGitHub {
-      owner = "junegunn";
-      repo = "seoul256.vim";
-      rev = "d9a91d8d4e153274e1ecc0ceb05c37f0d0de84d7";
-      fetchSubmodules = false;
-      sha256 = "sha256-bT4KvY4ezaaJyRDAJ4v3cv2twgw/Npb0rSKwsUKPCjk=";
-    };
-    date = "2025-07-02";
-  };
-  vim-tatami = {
-    pname = "vim-tatami";
-    version = "5f439001c1f1ee21e60038a974a81d2d6109b50a";
-    src = fetchFromGitHub {
-      owner = "machakann";
-      repo = "vim-colorscheme-tatami";
-      rev = "5f439001c1f1ee21e60038a974a81d2d6109b50a";
-      fetchSubmodules = false;
-      sha256 = "sha256-rwWo0eoZKncoOK+ASw2/iRiX2MvZVnctc31BBncQS3I=";
-    };
-    date = "2018-02-25";
-  };
-  vim-voir = {
-    pname = "vim-voir";
-    version = "54322cb399e8066f22e8a103d76bc1d168efb16d";
-    src = fetchFromGitHub {
-      owner = "PierreCapo";
-      repo = "voir.vim";
-      rev = "54322cb399e8066f22e8a103d76bc1d168efb16d";
-      fetchSubmodules = false;
-      sha256 = "sha256-o3owm0aGs5HAMSlEebegF/rxZLRYe/5ul3mxONcipm4=";
-    };
-    date = "2019-09-19";
   };
 }
