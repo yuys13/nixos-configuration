@@ -123,6 +123,9 @@
   };
   programs.fish.enable = true;
 
+  # Enable nix-ld for running unpatched dynamic binaries
+  programs.nix-ld.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
