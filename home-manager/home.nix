@@ -16,6 +16,7 @@
     ./programs/tig
     ./programs/pip
     ./programs/ghq
+    ./programs/herdr
   ];
 
   home = {
