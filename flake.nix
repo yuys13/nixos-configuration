@@ -34,6 +34,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -44,6 +49,7 @@
       flake-parts,
       treefmt-nix,
       nix-index-database,
+      comin,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -65,6 +71,7 @@
             };
             # > Our main nixos configuration file <
             modules = [
+              inputs.comin.nixosModules.comin
               ./nixos/configuration.nix
 
               home-manager.nixosModules.home-manager
