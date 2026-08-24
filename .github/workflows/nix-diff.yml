@@ -1,0 +1,24 @@
+name: Nix Diff
+on:
+  pull_request:
+jobs:
+  nix-diff:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install Nix
+        uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # v31.11.1
+        with:
+          extra_nix_config: |
+            extra-substituters = https://yuys13.cachix.org https://nix-community.cachix.org
+            extra-trusted-public-keys = yuys13.cachix.org-1:t6ghTZgSjyY/d4310E7ZxICuAAOLWjY4bWEdcVw7sl8= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=
+      - name: Diff Nix packages
+        uses: natsukium/nix-diff-action@4091452e4c7b3c7ea4ecbaec84be7f0066d810d7 # v1.1.1
+        with:
+          attributes: |
+            - displayName: hyper-nixos
+              attribute: nixosConfigurations.hyper-nixos.config.system.build.toplevel
